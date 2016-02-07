@@ -12,6 +12,7 @@ import java.util.List;
 
 import Business.User;
 import Exceptions.DaoException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UserDao extends Dao {
@@ -32,11 +33,13 @@ public class UserDao extends Dao {
             //Using a PreparedStatement to execute SQL...
             rs = ps.executeQuery();
             while (rs.next()) {
+                SimpleDateFormat date = new SimpleDateFormat ("2014-02-14"); 
                 
                 int userId = rs.getInt("userId");
                 String firstname = rs.getString("firstName");
                 String lastname = rs.getString("lastName");
                 java.sql.Date dob = rs.getDate("DOB");
+                String a = date.format(dob);
                 String addressLine1 = rs.getString("addressLine1");
                 String addressLine2 = rs.getString("addressLine2");
                 String city = rs.getString("city");

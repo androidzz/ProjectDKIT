@@ -24,18 +24,20 @@ a{
 	clear: both;
 }
 .content{
-	position:relative;
-    width:580px;
-    margin: 0 auto;
+	position: relative;
+	width:580px;
+	padding-top: 200px;
+	margin: 0 auto;
 }
 h1{
+	position: absolute;
 	margin:0px;
 	padding:20px;
 	font-size:42px;
 	color:#fff;
 	text-align:left;
 	font-weight:400;
-    text-align:left;
+	text-align:left;
 }
 h1 span{
 	font-size:22px;

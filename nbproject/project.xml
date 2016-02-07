@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.web.project</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
-            <name>ProjectV2.3</name>
+            <name>ProjectV2.8</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">

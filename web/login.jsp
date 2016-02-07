@@ -17,66 +17,8 @@
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
-        <script>
-            function formValidation() {
-                var eml = document.forms["loginCustomer"].email.value;
-                var psw = document.forms["loginCustomer"].password.value;
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600" rel="stylesheet" type="text/css">
 
-                if (empty(eml, "Fill email address field")) {
-                    document.getElementById('email').focus();
-                    document.getElementById("email").style.cssText = "box-shadow: 0 0 20px red;"
-                    return false;
-                } else if (emailValidator(eml, "Invalid email address")) {
-                    document.getElementById('email').focus();
-                    document.getElementById("email").style.cssText = "box-shadow: 0 0 20px red;"
-                    return false;
-                } else if (empty(psw, "Fill password field")) {
-                    document.getElementById('password').focus();
-                    document.getElementById("password").style.cssText = "box-shadow: 0 0 20px red;"
-                    return false;
-                } else if (lengthRestriction(psw, "Fill password field")) {
-                    document.getElementById('password').focus();
-                    document.getElementById("password").style.cssText = "box-shadow: 0 0 20px red;"
-                    return false;
-                }
-            }
-            //check if input is empty              
-            function empty(input, msg) {
-                if (input === null || input === "") {
-                    alert(msg);
-                    return true;
-                } else {
-                    document.getElementById("email").style.cssText = "box-shadow: 0 0 20px none;"
-                    document.getElementById("password").style.cssText = "box-shadow: 0 0 20px none;"
-                    return false;
-                }
-            }
-
-            function emailValidator(input, msg) {
-                var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
-                if (emailExp.test(input)) {
-                    document.getElementById("email").style.cssText = "box-shadow: 0 0 20px none;"
-                    document.getElementById("password").style.cssText = "box-shadow: 0 0 20px none;"
-                    return false;
-                } else {
-                    alert(msg);
-                    return true;
-                }
-            }
-
-            function lengthRestriction(input) {
-                var lnt = input.length;
-                if (lnt < 4 || lnt > 16) {
-                    alert(" Your password must be between 4 and 16 characters");
-                    return true;
-                } else {
-                    document.getElementById("email").style.cssText = "box-shadow: 0 0 20px none;"
-                    document.getElementById("password").style.cssText = "box-shadow: 0 0 20px none;"
-                    return false;
-                }
-
-            }
-        </script>
     </head>
     <body>
         <%
@@ -105,18 +47,30 @@
             </div>
 
             <h1>LVA <span>Movies</span></h1>
-            <div class="content">
-                <form name="loginCustomer" id="formValidation" onsubmit="return formValidation()" action="UserActionServlet" method="post">
-                    <table align="center" id="top1" >                
-                        <tr><td> E-mail  : </td><td style="padding-bottom:10px"> <input name="email" size=30 type="text" id="email"/> </td></tr>
-                        <tr><td> Password  : </td><td style="padding-bottom:10px"> <input name="password" size=30 type="password" id="password"/> </td></tr>
-                    </table>
-                    <p>  
-                        <input type="hidden" name="action" value="login" />
-                        <input type="submit" value="login" class="myButtonMovieDetails1"/>
-                    </p>
-                </form>
+            <div class="contentMeniu">
+                <ul class="bmenu1">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
+            <section id="loginBox">
+                <h2 id="h2Login">Login</h2>
+                <form name="loginCustomer" id="formValidation" method="post" action="UserActionServlet" class="minimal">
+                    <label for="username">
+                        <p id="pLogin">Email:</p>
+                        <input type="text" name="email" id="email" placeholder="Example@gmail.com" pattern="([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})" required="required" />
+                    </label>
+                    <label for="password">
+                        <p id="pLogin">Password:</p>
+                        <input type="password" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required"/>
+                    </label>
+                    <input type="hidden" name="action" value="login" />
+                    <button type="submit" value="login" class="btn-minimal">Sign in</button>
+                </form>
+            </section>
 
         </div>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>

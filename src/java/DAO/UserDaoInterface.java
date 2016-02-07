@@ -1,7 +1,4 @@
-/**
- *
- * @author Lorenas Orleckas
- */
+
 package DAO;
 
 import Business.User;
@@ -15,11 +12,11 @@ import java.util.ArrayList;
  */
 public interface UserDaoInterface {
 
-    public ArrayList<User> findAllCustomers() throws DaoException ;
+    public ArrayList<User> findAllUsers() throws DaoException ;
 
-    public User findCustomerByEmailPassword(String eml, String pword) throws DaoException;
+    public User findUserByEmailPassword(String eml, String pword) throws DaoException;
 
-    public User findCustomerByEmail(String cEmail) throws DaoException;
+    public User findUserByEmail(String cEmail) throws DaoException;
 
     
 }

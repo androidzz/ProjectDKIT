@@ -21,7 +21,7 @@ public class User {
     private String addressLine2;
     private String city;
     private String county;
-    private String postlCode;
+    private String postalCode;
     private String country;
     private String phone;
     private String password;
@@ -31,7 +31,7 @@ public class User {
     public User() {
     }
 
-    public User(int userId, String firstName, String lastName, Date DOB, String addressLine1, String addressLine2, String city, String county, String postlCode, String country, String phone, String password, String email, boolean admin) {
+    public User(int userId, String firstName, String lastName, Date DOB, String addressLine1, String addressLine2, String city, String county, String postalCode, String country, String phone, String password, String email, boolean admin) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,13 +40,14 @@ public class User {
         this.addressLine2 = addressLine2;
         this.city = city;
         this.county = county;
-        this.postlCode = postlCode;
+        this.postalCode = postalCode;
         this.country = country;
         this.phone = phone;
         this.password = password;
         this.email = email;
         this.admin = admin;
     }
+
 
     public int getUserId() {
         return userId;
@@ -112,12 +113,12 @@ public class User {
         this.county = county;
     }
 
-    public String getPostlCode() {
-        return postlCode;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setPostlCode(String postlCode) {
-        this.postlCode = postlCode;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getCountry() {
@@ -171,7 +172,7 @@ public class User {
         hash = 29 * hash + Objects.hashCode(this.addressLine2);
         hash = 29 * hash + Objects.hashCode(this.city);
         hash = 29 * hash + Objects.hashCode(this.county);
-        hash = 29 * hash + Objects.hashCode(this.postlCode);
+        hash = 29 * hash + Objects.hashCode(this.postalCode);
         hash = 29 * hash + Objects.hashCode(this.country);
         hash = 29 * hash + Objects.hashCode(this.phone);
         hash = 29 * hash + Objects.hashCode(this.password);
@@ -216,7 +217,7 @@ public class User {
         if (!Objects.equals(this.county, other.county)) {
             return false;
         }
-        if (!Objects.equals(this.postlCode, other.postlCode)) {
+        if (!Objects.equals(this.postalCode, other.postalCode)) {
             return false;
         }
         if (!Objects.equals(this.country, other.country)) {
@@ -239,7 +240,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", DOB=" + DOB + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city=" + city + ", county=" + county + ", postlCode=" + postlCode + ", country=" + country + ", phone=" + phone + ", password=" + password + ", email=" + email + ", admin=" + admin + '}';
+        return "User{" + "userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", DOB=" + DOB + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city=" + city + ", county=" + county + ", postalCode=" + postalCode + ", country=" + country + ", phone=" + phone + ", password=" + password + ", email=" + email + ", admin=" + admin + '}';
     }
 
 }
