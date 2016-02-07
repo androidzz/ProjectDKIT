@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<%-- 
+    Document   : about
+    Created on : Feb 7, 2016, 3:21:20 PM
+    Author     : Lorenas Orleckas
+--%>
 <%@page import="Business.User"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>

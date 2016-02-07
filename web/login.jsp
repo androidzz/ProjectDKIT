@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : about
+    Created on : Feb 7, 2016, 3:21:20 PM
+    Author     : Lorenas Orleckas
+--%>
 <%@page import="Business.User"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>

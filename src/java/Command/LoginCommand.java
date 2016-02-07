@@ -1,5 +1,8 @@
 package Command;
-
+/**
+ *
+ * @author Lorenas Orleckas
+ */
 import Business.AESCrypt;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

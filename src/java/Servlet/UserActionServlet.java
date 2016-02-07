@@ -1,5 +1,8 @@
 package Servlet;
-
+/**
+ *
+ * @author Lorenas Orleckas
+ */
 import Command.Command;
 import Command.CommandFactory;
 import java.io.IOException;
@@ -13,9 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-/**
- * Servlet implementation class
- */
+
 @WebServlet(urlPatterns={"/UserActionServlet"})
 public class UserActionServlet extends HttpServlet 
 {

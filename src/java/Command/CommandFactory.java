@@ -1,8 +1,9 @@
+
 package Command;
 
 /**
  *
- * @author Lorenas
+ * @author Lorenas Orleckas
  */
 public class CommandFactory {
 
